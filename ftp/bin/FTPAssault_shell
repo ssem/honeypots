@@ -1,0 +1,11 @@
+#!/usr/bin/env python
+from ftpassault.config import Config
+from ftpassault.file_system import Shell
+
+if __name__ == '__main__':
+    conf = Config()
+    shell = Shell(conf.file_system_path)
+    try:
+        shell.shell()
+    except KeyboardInterrupt:
+        shell.stop()

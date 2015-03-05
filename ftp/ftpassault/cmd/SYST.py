@@ -1,0 +1,4 @@
+
+class Cmd():
+    def __call__(self, fs, ftp, args):
+        ftp.conn_send_and_log('215 UNIX Type: L8\r\n')

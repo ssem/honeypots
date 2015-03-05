@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+import argparse
+from ftpassault.config import Config
+from ftpassault.file_system import Clone
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('clone_path',
+        help='path to begin recursivly cloning')
+    parser.add_argument('-p', '--prefix', default='/',
+        help='add a prefix to the paths found DEFAULT( / )')
+    parser.add_argument('-d', '--dirs', action='store_true',
+        help='clone directories only')
+    parser.add_argument('-f', '--files', action='store_true',
+        help='clone files only')
+    args = parser.parse_args()
+    conf = Config()
+    clone = Clone(conf.file_system_path)
+    if args.dirs:
+        clone.clone_dirs(args.prefix, args.clone_path)
+    elif args.files:
+        clone.clone_files(args.prefix, args.clone_path)
+    else:
+        clone.clone_all(args.prefix, args.clone_path)

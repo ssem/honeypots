@@ -1,0 +1,102 @@
+from kippo.core.honeypot import HoneyPotCommand
+from twisted.internet import reactor
+
+commands = {}
+
+class command_netstat(HoneyPotCommand):
+    def start(self):
+	if '--help' in self.args or '-h' in self.args:
+            for l in (
+                'usage: netstat [-vWeenNcCF] [<Af>] -r         netstat {-V|--version|-h|--help}',
+                '       netstat [-vWnNcaeol] [<Socket> ...]',
+                '       netstat { [-vWeenNac] -i | [-cWnNe] -M | -s }',
+                '',
+                '        -r, --route              display routing table',
+                '        -i, --interfaces         display interface table',
+                '        -g, --groups             display multicast group memberships',
+                '        -s, --statistics         display networking statistics (like SNMP)',
+                '        -M, --masquerade         display masqueraded connections',
+                '',
+                '        -v, --verbose            be verbose',
+                '        -W, --wide               don\'t truncate IP addresses',
+                '        -n, --numeric            don\'t resolve names',
+                '        --numeric-hosts          don\'t resolve host names',
+                '        --numeric-ports          don\'t resolve port names',
+                '        --numeric-users          don\'t resolve user names',
+                '        -N, --symbolic           resolve hardware names',
+                '        -e, --extend             display other/more information',
+                '        -p, --programs           display PID/Program name for sockets',
+                '        -c, --continuous         continuous listing',
+                '',
+                '        -l, --listening          display listening server sockets',
+                '        -a, --all, --listening   display all sockets (default: connected)',
+                '        -o, --timers             display timers',
+                '        -F, --fib                display Forwarding Information Base (default)',
+                '        -C, --cache              display routing cache instead of FIB',
+                '',
+                '  <Socket>={-t|--tcp} {-u|--udp} {-w|--raw} {-x|--unix} --ax25 --ipx --netrom',
+                '  <AF>=Use \'-6|-4\' or \'-A <af>\' or \'--<af>\'; default: inet',
+                '  List of possible address families (which support routing):',
+                '    inet (DARPA Internet) inet6 (IPv6) ax25 (AMPR AX.25) ',
+                '    netrom (AMPR NET/ROM) ipx (Novell IPX) ddp (Appletalk DDP) ',
+                '    x25 (CCITT X.25) ',
+                ):
+                self.writeln(l)
+        else:
+            for l in (
+                'Active Internet connections (w/o servers)',
+                'Proto Recv-Q Send-Q Local Address           Foreign Address         State',
+                'tcp        0      0 %s:ssh   static-96-244-83-:46987 ESTABLISHED' % '222.186.34.123',
+                'Active UNIX domain sockets (w/o servers)',
+                'Proto RefCnt Flags       Type       State         I-Node   Path',
+                'unix  14     [ ]         DGRAM                    7501     /dev/log',
+                'unix  3      [ ]         STREAM     CONNECTED     231434   @/com/ubuntu/upstart',
+                'unix  3      [ ]         STREAM     CONNECTED     824738   /var/run/dbus/system_bus_socket',
+                'unix  3      [ ]         STREAM     CONNECTED     231427   @/com/ubuntu/upstart',
+                'unix  3      [ ]         DGRAM                    220611',
+                'unix  3      [ ]         STREAM     CONNECTED     820775',
+                'unix  2      [ ]         DGRAM                    824586',
+                'unix  3      [ ]         STREAM     CONNECTED     824731',
+                'unix  2      [ ]         DGRAM                    8977',
+                'unix  2      [ ]         STREAM     CONNECTED     829698',
+                'unix  2      [ ]         DGRAM                    231624',
+                'unix  3      [ ]         STREAM     CONNECTED     820782',
+                'unix  2      [ ]         DGRAM                    820657',
+                'unix  3      [ ]         STREAM     CONNECTED     824737',
+                'unix  3      [ ]         STREAM     CONNECTED     7347',
+                'unix  3      [ ]         STREAM     CONNECTED     819226',
+                'unix  2      [ ]         DGRAM                    210939',
+                'unix  2      [ ]         DGRAM                    798287',
+                'unix  3      [ ]         STREAM     CONNECTED     819233',
+                'unix  3      [ ]         STREAM     CONNECTED     819227',
+                'unix  2      [ ]         STREAM     CONNECTED     38985',
+                'unix  3      [ ]         STREAM     CONNECTED     231419',
+                'unix  3      [ ]         STREAM     CONNECTED     19936',
+                'unix  2      [ ]         DGRAM                    823339',
+                'unix  3      [ ]         STREAM     CONNECTED     231413',
+                'unix  2      [ ]         DGRAM                    828906',
+                'unix  3      [ ]         STREAM     CONNECTED     231639',
+                'unix  3      [ ]         STREAM     CONNECTED     19937',
+                'unix  3      [ ]         STREAM     CONNECTED     231397   /var/run/dbus/system_bus_socket',
+                'unix  2      [ ]         DGRAM                    38987',
+                'unix  3      [ ]         STREAM     CONNECTED     231435   @/com/ubuntu/upstart',
+                'unix  3      [ ]         STREAM     CONNECTED     231417',
+                'unix  3      [ ]         STREAM     CONNECTED     231396',
+                'unix  3      [ ]         STREAM     CONNECTED     820783   /var/run/dbus/system_bus_socket',
+                'unix  2      [ ]         DGRAM                    61792',
+                'unix  3      [ ]         DGRAM                    220612',
+                'unix  2      [ ]         DGRAM                    829700',
+                'unix  3      [ ]         STREAM     CONNECTED     824730',
+                'unix  3      [ ]         STREAM     CONNECTED     820776',
+                'unix  3      [ ]         STREAM     CONNECTED     231640   /var/run/dbus/system_bus_socket',
+                'unix  2      [ ]         STREAM     CONNECTED     61790',
+                'unix  3      [ ]         STREAM     CONNECTED     819234   /var/run/dbus/system_bus_socket',
+                'unix  3      [ ]         STREAM     CONNECTED     7346',
+                'unix  2      [ ]         DGRAM                    818967',
+                'unix  2      [ ]         STREAM     CONNECTED     798285',
+                ):
+                self.writeln(l)
+        self.exit()
+        return
+
+commands['/bin/netstat'] = command_netstat

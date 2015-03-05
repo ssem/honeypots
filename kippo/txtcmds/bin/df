@@ -1,0 +1,7 @@
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda4        96G   71G   20G  79% /
+udev             10M  4.0K   10M   1% /dev
+tmpfs           201M  612K  200M   1% /run
+shm            1003M  4.0K 1003M   1% /dev/shm
+cgroup_root      10M     0   10M   0% /sys/fs/cgroup
+/dev/sda2       124M   21M   98M  18% /boot

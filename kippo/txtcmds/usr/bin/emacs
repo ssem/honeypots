@@ -1,0 +1,14 @@
+No command 'emac' found, did you mean:
+ Command 'emar' from package 'emscripten' (universe)
+ Command 'gmac' from package 'tkgate' (universe)
+ Command 'emacs' from package 'jove' (universe)
+ Command 'emacs' from package 'emacs23-lucid' (universe)
+ Command 'emacs' from package 'emacs24' (main)
+ Command 'emacs' from package 'emacs24-nox' (main)
+ Command 'emacs' from package 'emacs23' (universe)
+ Command 'emacs' from package 'e3' (universe)
+ Command 'emacs' from package 'emacs23-nox' (universe)
+ Command 'emacs' from package 'emacs24-lucid' (universe)
+ Command 'emcc' from package 'emscripten' (universe)
+ Command 'jmac' from package 'libjmac-java' (universe)
+emac: command not found

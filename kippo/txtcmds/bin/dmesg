@@ -1,0 +1,379 @@
+[    5.407657] pcieport 0000:00:15.7: Signaling PME through PCIe PME interrupt
+[    5.407704] pcie_pme 0000:00:15.7:pcie01: service driver pcie_pme loaded
+[    5.407826] pcieport 0000:00:16.0: Signaling PME through PCIe PME interrupt
+[    5.407873] pcie_pme 0000:00:16.0:pcie01: service driver pcie_pme loaded
+[    5.407994] pcieport 0000:00:16.1: Signaling PME through PCIe PME interrupt
+[    5.408042] pcie_pme 0000:00:16.1:pcie01: service driver pcie_pme loaded
+[    5.408163] pcieport 0000:00:16.2: Signaling PME through PCIe PME interrupt
+[    5.408210] pcie_pme 0000:00:16.2:pcie01: service driver pcie_pme loaded
+[    5.408331] pcieport 0000:00:16.3: Signaling PME through PCIe PME interrupt
+[    5.408378] pcie_pme 0000:00:16.3:pcie01: service driver pcie_pme loaded
+[    5.408500] pcieport 0000:00:16.4: Signaling PME through PCIe PME interrupt
+[    5.408547] pcie_pme 0000:00:16.4:pcie01: service driver pcie_pme loaded
+[    5.408669] pcieport 0000:00:16.5: Signaling PME through PCIe PME interrupt
+[    5.408715] pcie_pme 0000:00:16.5:pcie01: service driver pcie_pme loaded
+[    5.408837] pcieport 0000:00:16.6: Signaling PME through PCIe PME interrupt
+[    5.408884] pcie_pme 0000:00:16.6:pcie01: service driver pcie_pme loaded
+[    5.409005] pcieport 0000:00:16.7: Signaling PME through PCIe PME interrupt
+[    5.409052] pcie_pme 0000:00:16.7:pcie01: service driver pcie_pme loaded
+[    5.409173] pcieport 0000:00:17.0: Signaling PME through PCIe PME interrupt
+[    5.409221] pcie_pme 0000:00:17.0:pcie01: service driver pcie_pme loaded
+[    5.409342] pcieport 0000:00:17.1: Signaling PME through PCIe PME interrupt
+[    5.409390] pcie_pme 0000:00:17.1:pcie01: service driver pcie_pme loaded
+[    5.409511] pcieport 0000:00:17.2: Signaling PME through PCIe PME interrupt
+[    5.409558] pcie_pme 0000:00:17.2:pcie01: service driver pcie_pme loaded
+[    5.409679] pcieport 0000:00:17.3: Signaling PME through PCIe PME interrupt
+[    5.409726] pcie_pme 0000:00:17.3:pcie01: service driver pcie_pme loaded
+[    5.409847] pcieport 0000:00:17.4: Signaling PME through PCIe PME interrupt
+[    5.409895] pcie_pme 0000:00:17.4:pcie01: service driver pcie_pme loaded
+[    5.410016] pcieport 0000:00:17.5: Signaling PME through PCIe PME interrupt
+[    5.410063] pcie_pme 0000:00:17.5:pcie01: service driver pcie_pme loaded
+[    5.410184] pcieport 0000:00:17.6: Signaling PME through PCIe PME interrupt
+[    5.410232] pcie_pme 0000:00:17.6:pcie01: service driver pcie_pme loaded
+[    5.410353] pcieport 0000:00:17.7: Signaling PME through PCIe PME interrupt
+[    5.410400] pcie_pme 0000:00:17.7:pcie01: service driver pcie_pme loaded
+[    5.410419] pcieport 0000:00:18.0: Signaling PME through PCIe PME interrupt
+[    5.410642] pcie_pme 0000:00:18.0:pcie01: service driver pcie_pme loaded
+[    5.410764] pcieport 0000:00:18.1: Signaling PME through PCIe PME interrupt
+[    5.410817] pcie_pme 0000:00:18.1:pcie01: service driver pcie_pme loaded
+[    5.410938] pcieport 0000:00:18.2: Signaling PME through PCIe PME interrupt
+[    5.410985] pcie_pme 0000:00:18.2:pcie01: service driver pcie_pme loaded
+[    5.411106] pcieport 0000:00:18.3: Signaling PME through PCIe PME interrupt
+[    5.411153] pcie_pme 0000:00:18.3:pcie01: service driver pcie_pme loaded
+[    5.411274] pcieport 0000:00:18.4: Signaling PME through PCIe PME interrupt
+[    5.411322] pcie_pme 0000:00:18.4:pcie01: service driver pcie_pme loaded
+[    5.411443] pcieport 0000:00:18.5: Signaling PME through PCIe PME interrupt
+[    5.411490] pcie_pme 0000:00:18.5:pcie01: service driver pcie_pme loaded
+[    5.411611] pcieport 0000:00:18.6: Signaling PME through PCIe PME interrupt
+[    5.411659] pcie_pme 0000:00:18.6:pcie01: service driver pcie_pme loaded
+[    5.411780] pcieport 0000:00:18.7: Signaling PME through PCIe PME interrupt
+[    5.411836] pcie_pme 0000:00:18.7:pcie01: service driver pcie_pme loaded
+[    5.412857] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    5.433185] 00:09: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[    5.454045] 00:0a: ttyS1 at I/O 0x2f8 (irq = 3, base_baud = 115200) is a 16550A
+[    5.456809] Linux agpgart interface v0.103
+[    5.457683] vesafb: mode is 640x480x32, linelength=2560, pages=0
+[    5.457686] vesafb: scrolling: redraw
+[    5.457688] vesafb: Truecolor: size=8:8:8:8, shift=24:16:8:0
+[    5.457728] vesafb: framebuffer at 0xd0000000, mapped to 0xffffc90010100000, using 1216k, total 1216k
+[    5.460734] Console: switching to colour frame buffer device 80x30
+[    5.461873] fb0: VESA VGA frame buffer device
+[    5.474622] brd: module loaded
+[    5.481378] loop: module loaded
+[    5.483352] i8042: PNP: PS/2 Controller [PNP0303:KBC,PNP0f13:MOUS] at 0x60,0x64 irq 1,12
+[    5.484591] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    5.484726] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    5.485984] mousedev: PS/2 mouse device common for all mice
+[    5.487449] hidraw: raw HID events driver (C) Jiri Kosina
+[    5.488706] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input0
+[    5.493517] TCP: cubic registered
+[    5.493638] NET: Registered protocol family 17
+[    5.497151] registered taskstats version 1
+[    5.501319] drivers/rtc/hctosys.c: unable to open rtc device (rtc0)
+[    5.501474] Freeing unused kernel memory: 808K (ffffffff81681000 - ffffffff8174b000)
+[    5.588401] libata version 3.00 loaded.
+[    5.723827] ata_piix 0000:00:07.1: version 2.13
+[    5.725522] scsi0 : ata_piix
+[    5.726186] scsi1 : ata_piix
+[    5.726549] ata1: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0x10c0 irq 14
+[    5.726551] ata2: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0x10c8 irq 15
+[    5.924968] ata2.00: ATAPI: VMware Virtual IDE CDROM Drive, 00000001, max UDMA/33
+[    5.925338] input: ImPS/2 Generic Wheel Mouse as /devices/platform/i8042/serio1/input/input2
+[    5.941345] ata2.00: configured for UDMA/33
+[    5.941977] scsi 1:0:0:0: CD-ROM            NECVMWar VMware IDE CDR10 1.00 PQ: 0 ANSI: 5
+[    5.943401] sr0: scsi3-mmc drive: 1x/1x writer dvd-ram cd/rw xa/form2 cdda tray
+[    5.943403] cdrom: Uniform CD-ROM driver Revision: 3.20
+[    5.944098] sr 1:0:0:0: Attached scsi CD-ROM sr0
+[    5.961663] sr 1:0:0:0: Attached scsi generic sg0 type 5
+[    6.001280] scsi: <fdomain> Detection failed (no card)
+[    6.043667] GDT-HA: Storage RAID Controller Driver. Version: 3.05
+[    6.084598] imm: Version 2.05 (for Linux 2.4.0)
+[    6.125896] Fusion MPT base driver 3.04.20
+[    6.125898] Copyright (c) 1999-2008 LSI Corporation
+[    6.130173] Fusion MPT SPI Host driver 3.04.20
+[    6.131016] mptbase: ioc0: Initiating bringup
+[    6.342194] ioc0: LSI53C1030 B0: Capabilities={Initiator}
+[    6.351776] tsc: Refined TSC clocksource calibration: 2293.673 MHz
+[    6.793155] scsi2 : ioc0: LSI53C1030 B0, FwRev=01032920h, Ports=1, MaxQ=128, IRQ=17
+[    7.152857] scsi 2:0:0:0: Direct-Access     VMware,  VMware Virtual S 1.0  PQ: 0 ANSI: 2
+[    7.152877] scsi target2:0:0: Beginning Domain Validation
+[    7.153134] scsi target2:0:0: Domain Validation skipping write tests
+[    7.153136] scsi target2:0:0: Ending Domain Validation
+[    7.153156] scsi target2:0:0: FAST-40 WIDE SCSI 80.0 MB/s ST (25 ns, offset 127)
+[    7.154344] sd 2:0:0:0: [sda] 209715200 512-byte logical blocks: (107 GB/100 GiB)
+[    7.154365] sd 2:0:0:0: Attached scsi generic sg1 type 0
+[    7.154454] sd 2:0:0:0: [sda] Write Protect is off
+[    7.154457] sd 2:0:0:0: [sda] Mode Sense: 61 00 00 00
+[    7.154550] sd 2:0:0:0: [sda] Cache data unavailable
+[    7.154552] sd 2:0:0:0: [sda] Assuming drive cache: write through
+[    7.155100] sd 2:0:0:0: [sda] Cache data unavailable
+[    7.155102] sd 2:0:0:0: [sda] Assuming drive cache: write through
+[    7.155302]  sda: sda1 sda2 sda3 sda4
+[    7.156269] sd 2:0:0:0: [sda] Cache data unavailable
+[    7.156271] sd 2:0:0:0: [sda] Assuming drive cache: write through
+[    7.156337] sd 2:0:0:0: [sda] Attached SCSI disk
+[    7.158054] Fusion MPT FC Host driver 3.04.20
+[    7.160372] Fusion MPT SAS Host driver 3.04.20
+[    7.163395] 3ware Storage Controller device driver for Linux v1.26.02.003.
+[    7.164616] 3ware 9000 Storage Controller device driver for Linux v2.26.02.014.
+[    7.166090] Compaq SMART2 Driver (v 2.6.0)
+[    7.203751] HP CISS Driver (v 3.6.26)
+[    7.210038] Adaptec aacraid driver 1.2-0[30200]-ms
+[    7.212984] megaraid cmm: 2.20.2.7 (Release Date: Sun Jul 16 00:01:03 EST 2006)
+[    7.213255] megaraid: 2.20.5.1 (Release Date: Thu Nov 16 15:32:35 EST 2006)
+[    7.216089] megasas: 06.700.06.00-rc1 Sat. Aug. 31 17:00:00 PDT 2013
+[    7.220448] qla2xxx [0000:00:00.0]-0005: : QLogic Fibre Channel HBA Driver: 8.06.00.08-k.
+[    7.226099] Emulex LightPulse Fibre Channel SCSI driver 8.3.42
+[    7.226112] Copyright(c) 2004-2013 Emulex.  All rights reserved.
+[    7.229155] aic94xx: Adaptec aic94xx SAS/SATA driver version 1.0.3 loaded
+[    7.237554] ACPI: bus type USB registered
+[    7.237985] usbcore: registered new interface driver usbfs
+[    7.238216] usbcore: registered new interface driver hub
+[    7.238531] usbcore: registered new device driver usb
+[    7.238744] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    7.238975] ehci-pci: EHCI PCI platform driver
+[    7.239428] ehci-pci 0000:02:03.0: EHCI Host Controller
+[    7.239428] ehci-pci 0000:02:03.0: new USB bus registered, assigned bus number 1
+[    7.239428] ehci-pci 0000:02:03.0: cache line size of 64 is not supported
+[    7.239428] ehci-pci 0000:02:03.0: irq 17, io mem 0xc9010000
+[    7.252913] ehci-pci 0000:02:03.0: USB 2.0 started, EHCI 1.00
+[    7.253027] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    7.253031] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    7.253034] usb usb1: Product: EHCI Host Controller
+[    7.253036] usb usb1: Manufacturer: Linux 3.12.20-gentoo ehci_hcd
+[    7.253038] usb usb1: SerialNumber: 0000:02:03.0
+[    7.253582] hub 1-0:1.0: USB hub found
+[    7.253592] hub 1-0:1.0: 6 ports detected
+[    7.264148] usbcore: registered new interface driver usb-storage
+[    7.265569] uhci_hcd: USB Universal Host Controller Interface driver
+[    7.265625] uhci_hcd 0000:02:00.0: UHCI Host Controller
+[    7.265637] uhci_hcd 0000:02:00.0: new USB bus registered, assigned bus number 2
+[    7.265675] uhci_hcd 0000:02:00.0: irq 18, io base 0x000020c0
+[    7.265734] usb usb2: New USB device found, idVendor=1d6b, idProduct=0001
+[    7.265736] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    7.265738] usb usb2: Product: UHCI Host Controller
+[    7.265739] usb usb2: Manufacturer: Linux 3.12.20-gentoo uhci_hcd
+[    7.265741] usb usb2: SerialNumber: 0000:02:00.0
+[    7.266028] hub 2-0:1.0: USB hub found
+[    7.266038] hub 2-0:1.0: 2 ports detected
+[    7.267550] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    7.274378] usbcore: registered new interface driver usbhid
+[    7.274380] usbhid: USB HID core driver
+[    7.338936] device-mapper: uevent: version 1.0.3
+[    7.339177] device-mapper: ioctl: 4.26.0-ioctl (2013-08-15) initialised: dm-devel@redhat.com
+[    7.353228] Switched to clocksource tsc
+[    7.358397] md: raid0 personality registered for level 0
+[    7.359646] md: raid1 personality registered for level 1
+[    7.523169] raid6: sse2x1    9934 MB/s
+[    7.583247] usb 2-1: new full-speed USB device number 2 using uhci_hcd
+[    7.693380] raid6: sse2x2   12200 MB/s
+[    7.863591] raid6: sse2x4   13644 MB/s
+[    7.863591] raid6: using algorithm sse2x4 (13644 MB/s)
+[    7.863591] raid6: using ssse3x2 recovery algorithm
+[    7.863902] async_tx: api initialized (async)
+[    7.864019] xor: automatically using best checksumming function:
+[    7.963715]    avx       : 26866.000 MB/sec
+[    7.964651] md: raid6 personality registered for level 6
+[    7.964652] md: raid5 personality registered for level 5
+[    7.964653] md: raid4 personality registered for level 4
+[    7.973918] md: raid10 personality registered for level 10
+[    7.975363] md: linear personality registered for level -1
+[    7.976704] md: multipath personality registered for level -4
+[    7.992867] JFS: nTxBlock = 8192, nTxLock = 65536
+[    7.996685] RPC: Registered named UNIX socket transport module.
+[    7.996687] RPC: Registered udp transport module.
+[    7.996688] RPC: Registered tcp transport module.
+[    7.996690] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    8.003888] fuse init (API version 7.22)
+[    8.007373] e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
+[    8.007375] e1000: Copyright (c) 1999-2006 Intel Corporation.
+[    8.007498] e1000 0000:02:01.0: setting latency timer to 64
+[    8.290485] usb 2-1: New USB device found, idVendor=0e0f, idProduct=0003
+[    8.290488] usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    8.290490] usb 2-1: Product: VMware Virtual USB Mouse
+[    8.290492] usb 2-1: Manufacturer: VMware
+[    8.296459] input: VMware VMware Virtual USB Mouse as /devices/pci0000:00/0000:00:11.0/0000:02:00.0/usb2/2-1/2-1:1.0/input/input3
+[    8.296949] hid-generic 0003:0E0F:0003.0001: input,hidraw0: USB HID v1.10 Mouse [VMware VMware Virtual USB Mouse] on usb-0000:02:00.0-1/input0
+[    8.300798] input: VMware VMware Virtual USB Mouse as /devices/pci0000:00/0000:00:11.0/0000:02:00.0/usb2/2-1/2-1:1.1/input/input4
+[    8.301263] hid-generic 0003:0E0F:0003.0002: input,hidraw1: USB HID v1.10 Mouse [VMware VMware Virtual USB Mouse] on usb-0000:02:00.0-1/input1
+[    8.369439] e1000 0000:02:01.0 eth0: (PCI:66MHz:32-bit) 00:0c:29:13:55:0d
+[    8.369447] e1000 0000:02:01.0 eth0: Intel(R) PRO/1000 Network Connection
+[    8.369714] e1000 0000:02:05.0: setting latency timer to 64
+[    8.414278] usb 2-2: new full-speed USB device number 3 using uhci_hcd
+[    8.569588] usb 2-2: New USB device found, idVendor=0e0f, idProduct=0002
+[    8.569591] usb 2-2: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+[    8.569593] usb 2-2: Product: VMware Virtual USB Hub
+[    8.573369] hub 2-2:1.0: USB hub found
+[    8.573980] hub 2-2:1.0: 7 ports detected
+[    8.729020] e1000 0000:02:05.0 eth1: (PCI:66MHz:32-bit) 00:0c:29:13:55:17
+[    8.729026] e1000 0000:02:05.0 eth1: Intel(R) PRO/1000 Network Connection
+[    8.730886] pps_core: LinuxPPS API ver. 1 registered
+[    8.730889] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    8.731020] PTP clock support registered
+[    8.734676] Loading iSCSI transport class v2.0-870.
+[    8.777936] EXT3-fs (sda4): error: couldn't mount because of unsupported optional features (240)
+[    8.777972] EXT2-fs (sda4): error: couldn't mount because of unsupported optional features (240)
+[    8.779923] EXT4-fs (sda4): mounted filesystem with ordered data mode. Opts: (null)
+[    8.894947] usb 2-2.1: new full-speed USB device number 4 using uhci_hcd
+[    9.026066] usb 2-2.1: New USB device found, idVendor=0e0f, idProduct=0008
+[    9.026069] usb 2-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    9.026071] usb 2-2.1: Product: Virtual Bluetooth Adapter
+[    9.026072] usb 2-2.1: Manufacturer: VMware
+[    9.026073] usb 2-2.1: SerialNumber: 000650268328
+[    9.055544] systemd-udevd[2544]: starting version 215
+[    9.102753] ACPI: Deprecated procfs I/F for AC is loaded, please retry with CONFIG_ACPI_PROCFS_POWER cleared
+[    9.102764] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input5
+[    9.102831] ACPI: Power Button [PWRF]
+[    9.102861] ACPI: AC Adapter [ACAD] (on-line)
+[    9.105399] agpgart-intel 0000:00:00.0: Intel 440BX Chipset
+[    9.105663] agpgart-intel 0000:00:00.0: AGP aperture is 256M @ 0x0
+[    9.116757] [2571]: VMCI: shared components initialized.
+[    9.116774] Probing for vmci/PCI.
+[    9.116953] Found vmci/PCI at 0x1080, irq 16.
+[    9.116966] VMCI: using capabilities 0xc.
+[    9.117015] [2571]: VMCI: Host capability check passed.
+[    9.117053] vmci 0000:00:07.7: irq 72 for MSI/MSI-X
+[    9.117064] vmci 0000:00:07.7: irq 73 for MSI/MSI-X
+[    9.117118] Registered vmci device.
+[    9.117149] [2571]: VMCI: Using guest personality
+[    9.117151] [2571]: VMCI: host components initialized.
+[    9.117246] [2571]: VMCI: Module registered (name=vmci,major=10,minor=55).
+[    9.117248] [2571]: VMCI: Using host personality
+[    9.117250] [2571]: VMCI: Module (name=vmci) is initialized
+[    9.146634] microcode: CPU0 sig=0x306a9, pf=0x1, revision=0x15
+[    9.146776] piix4_smbus 0000:00:07.3: Host SMBus controller not enabled!
+[    9.158952] Floppy drive(s): fd0 is 1.44M
+[    9.161326] parport_pc 00:08: reported by Plug and Play ACPI
+[    9.161338] parport0: PC-style at 0x378, irq 7 [PCSPP,TRISTATE]
+[    9.176239] FDC 0 is a post-1991 82077
+[    9.176466] input: PC Speaker as /devices/platform/pcspkr/input/input6
+[    9.256604] rtc_cmos 00:03: rtc core: registered rtc_cmos as rtc0
+[    9.256730] rtc_cmos 00:03: alarms up to one month, y3k, 114 bytes nvram, hpet irqs
+[    9.259964] microcode: CPU1 sig=0x306a9, pf=0x1, revision=0x15
+[    9.264086] microcode: CPU2 sig=0x306a9, pf=0x1, revision=0x15
+[    9.264249] microcode: CPU3 sig=0x306a9, pf=0x1, revision=0x15
+[    9.264514] microcode: Microcode Update Driver: v2.00 <tigran@aivazian.fsnet.co.uk>, Peter Oruba
+[    9.265514] ppdev: user-space parallel port driver
+[   10.442580] EXT4-fs (sda4): re-mounted. Opts: (null)
+[   10.478131] Adding 3145724k swap on /dev/sda3.  Priority:-1 extents:1 across:3145724k
+[   10.847901] e1000: eth0 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[   16.875519] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[   23.309357] NET: Registered protocol family 10
+[   35.587544] sda4: WRITE SAME failed. Manually zeroing.
+[ 1243.005273] e1000: eth1 NIC Link is Down
+[ 1709.817111] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[ 1713.824458] e1000: eth1 NIC Link is Down
+[ 1906.158996] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[ 1910.164994] e1000: eth1 NIC Link is Down
+[ 1916.176974] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[ 3226.465995] e1000: eth1 NIC Link is Down
+[ 3270.543136] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[ 4446.588000] e1000: eth1 NIC Link is Down
+[ 4490.665851] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[ 4666.972011] e1000: eth1 NIC Link is Down
+[ 4711.049589] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[ 4729.080005] e1000: eth1 NIC Link is Down
+[ 4773.156875] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[ 4887.355544] e1000: eth1 NIC Link is Down
+[ 4931.432571] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[ 6918.899912] e1000: eth1 NIC Link is Down
+[ 6924.000317] usb 2-2.2: new full-speed USB device number 5 using uhci_hcd
+[ 6924.170605] usb 2-2.2: New USB device found, idVendor=0403, idProduct=6001
+[ 6924.170608] usb 2-2.2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[ 6924.170609] usb 2-2.2: Product: FT232R USB UART
+[ 6924.170610] usb 2-2.2: Manufacturer: FTDI
+[ 6924.170611] usb 2-2.2: SerialNumber: A900fwgY
+[ 6926.914186] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[ 7802.446815] e1000: eth1 NIC Link is Down
+[ 7846.524407] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[ 8108.990266] e1000: eth1 NIC Link is Down
+[ 8153.068054] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[ 9747.872227] e1000: eth1 NIC Link is Down
+[ 9793.952763] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[ 9805.973298] e1000: eth1 NIC Link is Down
+[ 9850.050501] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[16090.957955] e1000: eth1 NIC Link is Down
+[16102.979959] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[16125.017201] e1000: eth1 NIC Link is Down
+[16131.028327] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[17533.468180] e1000: eth1 NIC Link is Down
+[17589.566678] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[19206.680040] e1000: eth1 NIC Link is Down
+[19250.757283] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[19280.808943] e1000: eth1 NIC Link is Down
+[19324.885330] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[19417.045956] e1000: eth1 NIC Link is Down
+[19461.122323] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[19755.634132] e1000: eth1 NIC Link is Down
+[19803.718410] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[20526.977183] e1000: eth1 NIC Link is Down
+[20571.053944] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[21358.442812] e1000: eth1 NIC Link is Down
+[21424.559090] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[21436.579703] e1000: eth1 NIC Link is Down
+[21480.656903] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[21843.287332] e1000: eth1 NIC Link is Down
+[22171.858749] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[22199.906696] e1000: eth1 NIC Link is Down
+[22247.991995] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[22400.265866] e1000: eth1 NIC Link is Down
+[22446.346507] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[23131.578886] e1000: eth1 NIC Link is Down
+[23175.655981] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[23259.801317] e1000: eth1 NIC Link is Down
+[23303.879158] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[25641.945580] e1000: eth1 NIC Link is Down
+[25658.325823] usb 2-2.2: USB disconnect, device number 5
+[25661.120175] e1000: eth0 NIC Link is Down
+[30000.308395] [3]: VMCI: Updating context from (ID=0xffffffff) to (ID=0x5c13550d) on event (type=0).
+[30000.308563] usb 2-2.1: USB disconnect, device number 4
+[30000.570963] usb 2-2.1: new full-speed USB device number 6 using uhci_hcd
+[30000.695289] usb 2-2.1: New USB device found, idVendor=0e0f, idProduct=0008
+[30000.695292] usb 2-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[30000.695293] usb 2-2.1: Product: Virtual Bluetooth Adapter
+[30000.695294] usb 2-2.1: Manufacturer: VMware
+[30000.695295] usb 2-2.1: SerialNumber: 000650268328
+[32801.193438] e1000: eth0 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[35204.242535] e1000: eth0 NIC Link is Down
+[35204.243109] e1000 0000:02:01.0 eth0: Reset adapter
+[35209.302208] e1000: eth0 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[48697.837750] e1000: eth0 NIC Link is Down
+[48739.600610] e1000: eth0 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[49145.940469] e1000: eth0 NIC Link is Down
+[49175.792488] e1000: eth0 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[52635.126251] e1000: eth0 NIC Link is Down
+[52643.132646] e1000: eth0 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[52728.807900] [3503]: VMCI: Updating context from (ID=0x5c13550d) to (ID=0x5c13550d) on event (type=0).
+[52728.808491] usb 2-2.1: USB disconnect, device number 6
+[52735.157559] hub 2-2:1.0: hub_port_status failed (err = -110)
+[52735.157565] hub 2-2:1.0: connect-debounce failed, port 1 disabled
+[52738.713914] usb 2-2.1: new full-speed USB device number 7 using uhci_hcd
+[52738.831082] usb 2-2.1: New USB device found, idVendor=0e0f, idProduct=0008
+[52738.831086] usb 2-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[52738.831088] usb 2-2.1: Product: Virtual Bluetooth Adapter
+[52738.831090] usb 2-2.1: Manufacturer: VMware
+[52738.831091] usb 2-2.1: SerialNumber: 000650268328
+[52875.857760] e1000: eth0 NIC Link is Down
+[52886.763947] e1000: eth0 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[52908.600581] usb 2-2.2: new full-speed USB device number 8 using uhci_hcd
+[52908.760055] usb 2-2.2: New USB device found, idVendor=0403, idProduct=6001
+[52908.760058] usb 2-2.2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[52908.760059] usb 2-2.2: Product: FT232R USB UART
+[52908.760060] usb 2-2.2: Manufacturer: FTDI
+[52908.760061] usb 2-2.2: SerialNumber: A900fwgY
+[52994.315846] [3503]: VMCI: Updating context from (ID=0x5c13550d) to (ID=0x5c13550d) on event (type=0).
+[52994.316437] usb 2-2.1: USB disconnect, device number 7
+[52994.554331] usb 2-2.1: new full-speed USB device number 9 using uhci_hcd
+[52994.669317] usb 2-2.1: New USB device found, idVendor=0e0f, idProduct=0008
+[52994.669320] usb 2-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[52994.669322] usb 2-2.1: Product: Virtual Bluetooth Adapter
+[52994.669323] usb 2-2.1: Manufacturer: VMware
+[52994.669324] usb 2-2.1: SerialNumber: 000650268328
+[52994.713385] usb 2-2.2: USB disconnect, device number 8
+[57938.331777] _md5.so[28376]: segfault at 1 ip 0000000000000001 sp 00007fff311a9ae8 error 14 in _md5.so[7f1d5fd93000+3000]
+[58202.764113] _md5.so[28390]: segfault at 1 ip 0000000000000001 sp 00007fff9099c9f8 error 14 in _md5.so[7f335668b000+3000]
+[58206.704105] _md5.so[28392]: segfault at 2 ip 0000000000000002 sp 00007ffff8058338 error 14 in _md5.so[7fde28b50000+3000]
+[83018.785336] e1000: eth0 NIC Link is Down
+[83026.790107] e1000: eth0 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[93539.806073] e1000: eth0 NIC Link is Down
+[93557.814744] e1000: eth0 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
