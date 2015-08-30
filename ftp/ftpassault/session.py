@@ -26,7 +26,8 @@ class Session():
 
     def conn_send_and_log(self, message):
         '''sends data to connection socket and writes data to log file'''
-        try:self._log_file.write('s:%s' % message)
+        timestamp = time.strftime('%b-%d-%H-%M-%S', time.gmtime())
+        try:self._log_file.write('s:%s:%s' % (timestamp, message))
         except:pass
         print "[+] CONN", message.rstrip("\r\n")
         self.conn.send(message)
@@ -34,22 +35,22 @@ class Session():
     def conn_recv_and_log(self, size):
         '''returns data from connection socket and writes recieved data to log file'''
         message = self.conn.recv(size)
-        try:self._log_file.write('c:%s' % message)
+        timestamp = time.strftime('%b-%d-%H-%M-%S', time.gmtime())
+        try:self._log_file.write('c:%s:%s' % (timestamp, message))
         except:pass
         return message
 
     def data_send_and_log(self, message):
         '''sends data to data socket and writes data to log file'''
-        try:self._log_file.write('s:%s' % message)
-        except:pass
-        print "[+] DATA", message.rstrip("\r\n")
+        #try:self._log_file.write('s:%s' % message)
+        #except:pass
         self.data.send(message)
 
     def data_recv_and_log(self, size):
         '''returns data from data socket and writes recieved data to log file'''
         message = self.data.recv(size)
-        try:self._log_file.write('c:%s' % message)
-        except:pass
+        #try:self._log_file.write('c:%s' % message)
+        #except:pass
         return message
 
     # for debugging perposes when writing commands

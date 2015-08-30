@@ -1,5 +1,4 @@
 import os
-from Crypto.Random import random
 
 class Cmd():
     def __call__(self, fs, ftp, args):
@@ -16,7 +15,7 @@ class Cmd():
                 fullpath = path
             fake_file = fs.getfile(fullpath)
             if fake_file.file_type != 'd':
-                try:content = str(random.getrandbits(int(fake_file.size)))
+                try:content = str(os.urandom(int(fake_file.size)))
                 except:content = ""
                 while True:
                     if len(content) < 1:

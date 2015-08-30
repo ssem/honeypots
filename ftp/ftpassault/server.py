@@ -32,6 +32,7 @@ class Ftp():
         try:
             self.socket.bind(('', int(port)))
             self.socket.listen(0)
+            print "Listening on: %s" % port
         except socket.error as e:
             if e.errno == 13:
                 exit("Ports below 1024 must run as root")
