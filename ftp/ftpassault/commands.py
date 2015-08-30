@@ -15,7 +15,7 @@ class Commands():
         path = '%s/cmd' % os.path.dirname(ftpassault.__file__)
         for module in os.listdir(path):
             if not module.startswith('__') and not module.endswith('.pyc'):
-                # import found model and add to self.commands
+                # import model and add to self.commands
                 mod = imp.load_source('Cmd', os.path.join(path, module))
                 # remove .py from module name and use that as key
                 self.commands[module[:-3]] = mod.Cmd()
@@ -24,6 +24,6 @@ class Commands():
         # run given command
         try:self.commands[cmd](fs, ftp, args)
         except Exception as e:
+            print "[-] COMMANDS", str(e)
             # if fail send 502 to client
             ftp.conn_send_and_log('502 not implemented.\r\n')
-            print e

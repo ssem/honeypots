@@ -1,4 +1,5 @@
-from setuptools import setup
+#!/usr/bin/env python
+from distutils.core import setup
 
 setup(name='assault',
     version='0.1',
@@ -7,4 +8,5 @@ setup(name='assault',
     scripts=['bin/FTPAssault_clone',
              'bin/FTPAssault_server',
              'bin/FTPAssault_shell'],
-    packages=['ftpassault'],)
+    packages=['ftpassault',
+              'ftpassault/cmd'],)

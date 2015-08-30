@@ -20,12 +20,15 @@ class Session():
         conf = Config()
         timestamp = time.strftime('%b_%d_%H:%M', time.gmtime())
         logpath = os.path.join(conf.log_path, '%s_%s' % (addr[0],timestamp))
-        self._log_file = open(logpath, 'w')
+        if not os.path.isdir(os.path.dirname(logpath)):
+            os.makedirs(os.path.dirname(logpath))
+        self._log_file = open(logpath, 'w+')
 
     def conn_send_and_log(self, message):
         '''sends data to connection socket and writes data to log file'''
         try:self._log_file.write('s:%s' % message)
         except:pass
+        print "[+] CONN", message.rstrip("\r\n")
         self.conn.send(message)
 
     def conn_recv_and_log(self, size):
@@ -39,6 +42,7 @@ class Session():
         '''sends data to data socket and writes data to log file'''
         try:self._log_file.write('s:%s' % message)
         except:pass
+        print "[+] DATA", message.rstrip("\r\n")
         self.data.send(message)
 
     def data_recv_and_log(self, size):

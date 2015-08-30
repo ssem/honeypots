@@ -66,9 +66,8 @@ class File_System():
         # load fake file sysem from disk
         try:self.fs = pickle.load(open(fs_path, 'rb'))
         except:
-            # non recoverable fail print message and bail
-            print 'Error: can not load file system from %s' % fs_path
-            exit(-1)
+            print '[-] Can not load file system: %s' % fs_path
+            self.fs = {'/': {'files': {}, 'stats': None}}
 
     def mkdir(self, fullpath, uid, suid, gid, sgid, size, mode, hardlinks=2, ctime=time.time(), content=''):
         '''creates a fake dir'''
@@ -180,10 +179,10 @@ class File_System():
         # chown was successful return None
         return None
 
-    def chtime(self, path, ctime):
+    def chtime(self, fullpath, ctime):
         '''modifies the time of fake file'''
-        # return error if file doesn't exist
-        if not self.fileexists(fullpath):
+        # return error if path doesn't exist
+        if not self.exists(fullpath):
             return "'%s': No such file or directory" % fullpath
         dirname = os.path.dirname(fullpath)
         basename = os.path.basename(fullpath)
@@ -195,17 +194,17 @@ class File_System():
             elif self.fileexists(fullpath):
                 obj = self.fs[dirname]['files'][basename]
             # try setting objects ctime
-            obj.ctime = ctime
+            obj.ctime = float(ctime)
         except Exception as e:
             # this should not happen print error to screen and fail silently
             print 'chtime: %s' % e
         # chtime was succesful return None
         return None
 
-    def chsize(self, path, size):
+    def chsize(self, fullpath, size):
         '''modifies the size of fake file'''
-        # return error if file doesn't exist
-        if not self.fileexists(fullpath):
+        # return error if path doesn't exist
+        if not self.exists(fullpath):
             return "'%s': No such file or directory" % fullpath
         dirname = os.path.dirname(fullpath)
         basename = os.path.basename(fullpath)
@@ -214,10 +213,10 @@ class File_System():
             if self.direxists(fullpath):
                 obj = self.fs[fullpath]['stats']
             # check if fullpath is file
-            elif self.filexists(fullpath):
+            elif self.fileexists(fullpath):
                 obj = self.fs[dirname]['files'][basename]
             # try setting objects size
-            obj.size = size
+            obj.size = int(size)
         except Exception as e:
             # this should not happen print error to screen and fail silently
             print 'chsize: %s' % e
@@ -394,6 +393,32 @@ class Shell():
         if result is not None:
             print result
 
+    def chtime(self, args):
+        parser = argparse.ArgumentParser()
+        parser.add_argument('time')
+        parser.add_argument('file')
+        args = parser.parse_args(args)
+        if args.file.startswith('/'):
+            fullpath = args.file
+        else:
+            fullpath = os.path.join(self.cwd, args.file)
+        result = self.fs.chtime(fullpath, args.time)
+        if result is not None:
+            print result
+
+    def chsize(self, args):
+        parser = argparse.ArgumentParser()
+        parser.add_argument('size')
+        parser.add_argument('file')
+        args = parser.parse_args(args)
+        if args.file.startswith('/'):
+            fullpath = args.file
+        else:
+            fullpath = os.path.join(self.cwd, args.file)
+        result = self.fs.chsize(fullpath, args.size)
+        if result is not None:
+            print result
+
     def cd(self, args):
         parser = argparse.ArgumentParser()
         parser.add_argument('path', nargs='*')
@@ -500,8 +525,11 @@ class Shell():
         print 'chlink\t\tchange hardlink number of file'
         print 'chmod\t\tchange permissions of file'
         print 'chown\t\tchange ownership of file'
+        print 'chtime\t\tchange ctime of file'
+        print 'chsize\t\tchange size of file'
         print 'cd\t\tchange current working directory'
         print 'ls\t\tlist files'
+        print 'mv\t\tmove file'
         print 'rm\t\tremove file'
         print 'clear\t\tclear screen'
         print 'save\t\tsave file system to disk'
@@ -517,9 +545,11 @@ class Shell():
                 global CMDS
                 CMDS = ['mkdir', 'touch', 'chlink', 'chmod', 'chown',
                         'mv', 'cd', 'ls', 'rm', 'file_system', 'save',
-                        'exit', 'help']
-                for filename in self.fs.listdir(self.cwd):
-                    CMDS.append(filename)
+                        'exit', 'help', 'chtime', 'chsize']
+                try:
+                    for filename in self.fs.listdir(self.cwd):
+                        CMDS.append(filename)
+                except:pass
                 args = raw_input('%s $ ' % self.cwd).lstrip(' ').split()
                 if args[0] == 'mkdir':
                     self.mkdir(args[1:])
@@ -531,6 +561,10 @@ class Shell():
                     self.chmod(args[1:])
                 elif args[0] == 'chown':
                     self.chown(args[1:])
+                elif args[0] == 'chtime':
+                    self.chtime(args[1:])
+                elif args[0] == 'chsize':
+                    self.chsize(args[1:])
                 elif args[0] == 'mv':
                     self.mv(args[1:])
                 elif args[0] == 'cd':
@@ -555,10 +589,10 @@ class Shell():
             except StopIteration:
                 self.save_file_system()
                 return
-            except SystemExit:
-                pass
-            except Exception as e:
-                print e
+            #except SystemExit:
+            #    pass
+            #except Exception as e:
+            #    print e
 
 
 CMDS = []

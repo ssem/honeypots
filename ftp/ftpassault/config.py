@@ -13,6 +13,7 @@ class Config():
         self.file_system_path = 'conf/file_system.pickle'
         self.password_path = 'conf/password.db'
         self.ftp_version_string = '200 (vsFTPd 3.0.2)'
+        self.privs = 'ftp'
         self._try_loading_conf_file()
 
     def _try_loading_conf_file(self):
@@ -40,3 +41,5 @@ class Config():
                     self.password_path = conf.get('honeypot', 'password_path')
                 if conf.has_option('honeypot', 'ftp_version_string'):
                     self.ftp_version_string = conf.get('honeypot', 'ftp_version_string')
+                if conf.has_option('honeypot', 'privs'):
+                    self.privs = conf.get('honeypot', 'privs')
