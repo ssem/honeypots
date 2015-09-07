@@ -5,7 +5,7 @@ from ftpassault.config import Config
 
 # object passed to each command
 class Session():
-    def __init__(self, timeout=5):
+    def __init__(self, timeout=120):
         self.disconnect = False     # switch to true if you want the server to disconnect
         self.username = None        # username supplied by client
         self.password = None        # password supplied by client
