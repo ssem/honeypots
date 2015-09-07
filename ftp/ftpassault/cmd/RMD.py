@@ -14,6 +14,6 @@ class Cmd():
         if fs.direxists(fullpath):
             result = fs.rm(fullpath)
             if result is None:
-                ftp.conn_send_and_log('250 Remove directory operation successful.\r\n')
+                ftp.send('250 Remove directory operation successful.\r\n')
                 return
-        ftp.conn_send_and_log('550 Remove directory operation failed.\r\n')
+        ftp.send('550 Remove directory operation failed.\r\n')

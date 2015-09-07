@@ -16,7 +16,7 @@ class Cmd():
             if fs.direxists(os.path.dirname(fullpath)) and not fs.direxists(fullpath):
                 if fs.fileexists(fullpath):
                     fs.rm(fullpath)
-                ftp.conn_send_and_log('150 ok to send data.\r\n')
+                ftp.send('150 ok to send data.\r\n')
                 content = ''
                 while True:
                     data = ftp.data.recv(1024)
@@ -33,8 +33,8 @@ class Cmd():
                     len(content), 33188, content=content)
                 ftp.data.close()
                 ftp.data = None
-                ftp.conn_send_and_log('226 Transfer complete.\r\n')
+                ftp.send('226 Transfer complete.\r\n')
             else:
-                ftp.conn_send_and_log('554 Could not create file.\r\n')
+                ftp.send('554 Could not create file.\r\n')
         else:
-            ftp.conn_send_and_log('550 Port command unsuccessful.\r\n')
+            ftp.send('550 Port command unsuccessful.\r\n')

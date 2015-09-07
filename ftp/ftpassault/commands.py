@@ -26,4 +26,4 @@ class Commands():
         except Exception as e:
             print "[-] COMMANDS", str(e)
             # if fail send 502 to client
-            ftp.conn_send_and_log('502 not implemented.\r\n')
+            ftp.send('502 not implemented.\r\n')

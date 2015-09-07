@@ -9,4 +9,4 @@ class Cmd():
             ftp.cwd = os.path.dirname(ftp.cwd)
         else:
             ftp.cwd = os.path.join(ftp.cwd, path)
-        ftp.conn_send_and_log('250 Directory successfully changed.\r\n')
+        ftp.send('250 Directory successfully changed.\r\n')

@@ -29,63 +29,36 @@ class Ftp():
             old_umask = os.umask(077)
 
     def serve(self, port, welcome):
-        try:
-            self.socket.bind(('', int(port)))
-            self.socket.listen(0)
-            print "Listening on: %s" % port
-        except socket.error as e:
-            if e.errno == 13:
-                exit("Ports below 1024 must run as root")
-            raise e
+        self.session.bind(("", int(port)))
+        self.session.listen(0)
+        print "Listening on: %s" % port
         self.drop_privs()
         while True:
             try:
-                # check if any cmds want us to disconnect
-                if self.session.disconnect:
-                    raise Exception("disconnect")
-                # check if we have a connection, if not wait for one
                 if self.session.conn is None:
-                    self.session.conn, addr = self.socket.accept()
-                    # open log file for new connection
-                    self.session.open_log_file(addr)
-                    self.session.conn_send_and_log(welcome+'\r\n')
-                recv = self.session.conn_recv_and_log(256)
-                if recv == '':
-                    raise Exception("no command")
-                # parse client command
-                cmd = recv[:4].strip().upper()
-                # parse client args
-                args = recv[4:].lstrip(' ').rstrip('\r\n')
+                    self.session.accept()
+                    self.session.send(welcome+'\r\n')
+                message = self.session.recv(256)
+                try:cmd = message[:4].strip().upper()
+                except:cmd = ''
+                try:args = message[4:].lstrip(' ').rstrip('\r\n')
+                except:args = ''
                 print "[+] CMD", cmd, args
-                # if client is attempting to log in or is authenticated run command
                 if cmd == 'AUTH' or cmd == 'USER' or cmd == 'PASS' or self.session.authenticated:
                     self.commands(self.fs, self.session, cmd, args)
+                else:
+                    self.session.close()
             except KeyboardInterrupt:
                 exit("Bye")
             except Exception as e:
                 print "[-] SERVER", str(e)
-                if str(e) != "no command" and str(e) != "disconnect":
-                    error_log = open(os.path.join(self.conf.log_path, "server_error"), "w+")
-                    error_log.write(str(e))
-                    error_log.close()
-                # if exception close everything and restart
-                try:self.session.data.close()
-                except:pass
-                try:self.session.conn.close()
-                except:pass
-                try:self.session._log_file.close()
-                except:pass
-                try:self.session = Session()
-                except:pass
+                error_log = open(os.path.join(self.conf.log_path, "server_error"), "w+")
+                error_log.write(str(e))
+                error_log.close()
+                self.session.close()
 
     def __del__(self):
-        # on exit attempt to save the filesystem and close sockets
-        try:self.fs.save()
-        except:pass
-        try:self.session._log_file.close()
-        except:pass
-        try:self.session.conn.close()
-        except:pass
-        try:self.socket.close()
-        except:pass
+        self.fs.save()
+        #except:print "[-] Error saving file system"
+        self.session.close()
 

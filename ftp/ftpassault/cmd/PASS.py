@@ -8,7 +8,7 @@ class Cmd():
                 if line.split(':')[-1].rstrip('\n') ==  args:
                     ftp.password = args
                     ftp.authenticated = True
-                    ftp.conn_send_and_log('230 Login successful.\r\n')
+                    ftp.send('230 Login successful.\r\n')
                     return
-        ftp.disconnect = True
-        ftp.conn_send_and_log('530 Login incorrect.\r\n')
+        ftp.send('530 Login incorrect.\r\n')
+        ftp.close()

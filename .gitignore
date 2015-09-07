@@ -1,0 +1,7 @@
+*.pyc
+*.swp
+*.out
+*.db
+build
+ftp/build
+kippo/build

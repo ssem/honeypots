@@ -14,6 +14,6 @@ class Cmd():
         if fs.fileexists(fullpath):
             result = fs.rm(fullpath)
             if result is None:
-                ftp.conn_send_and_log('250 Delete operation successful.\r\n')
+                ftp.send('250 Delete operation successful.\r\n')
                 return
-        ftp.conn_send_and_log('550 Delete operation failed.\r\n')
+        ftp.send('550 Delete operation failed.\r\n')
