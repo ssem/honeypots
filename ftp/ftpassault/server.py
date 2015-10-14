@@ -24,8 +24,8 @@ class Ftp():
             except Exception as e:
                 exit("Can not drop privileges user does not exist: %s" % self.conf.privs)
             os.setgroups([])
-            os.setuid(running_uid)
             os.setgid(running_gid)
+            os.setuid(running_uid)
             old_umask = os.umask(077)
 
     def serve(self, port, welcome):
