@@ -8,7 +8,7 @@ class Config():
         self.ftp_port = '2121'
         self.hostname = 'workhorse'
         self.log_path = 'log'
-        self.download_path = 'download'
+        self.download_path = 'downloads'
         self.download_limit_size = '2147483648'
         self.file_system_path = 'conf/file_system.pickle'
         self.password_path = 'conf/password.db'
