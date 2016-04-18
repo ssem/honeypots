@@ -1,0 +1,36 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+    echo "Usage: <output dir>"
+    exit 1
+fi
+if [ $EUID -ne 0 ]; then
+    echo "must run as root"
+    exit 1
+fi
+echo "Parent Pid:$$"
+OUTDIR=$1
+TIME=`date +"%Y%m%d-%H:%M:%S"`
+
+./catch_ah > ${OUTDIR}/"${TIME}.ah" &
+./catch_dstopts > ${OUTDIR}/"${TIME}.dstopts" &
+./catch_egp > ${OUTDIR}/"${TIME}.egp" &
+./catch_esp > ${OUTDIR}/"${TIME}.esp" &
+./catch_fragment > ${OUTDIR}/"${TIME}.fragment" &
+./catch_gre > ${OUTDIR}/"${TIME}.gre" &
+./catch_icmp > ${OUTDIR}/"${TIME}.icmp" &
+./catch_icmpv6 > ${OUTDIR}/"${TIME}.icmpv6" &
+./catch_idp > ${OUTDIR}/"${TIME}.idp" &
+./catch_igmp > ${OUTDIR}/"${TIME}.igmp" &
+./catch_ipip > ${OUTDIR}/"${TIME}.ipip" &
+./catch_ipv6 > ${OUTDIR}/"${TIME}.ipv6" &
+./catch_pim > ${OUTDIR}/"${TIME}.pim" &
+./catch_pup > ${OUTDIR}/"${TIME}.pup" &
+./catch_raw > ${OUTDIR}/"${TIME}.raw" &
+./catch_routing > ${OUTDIR}/"${TIME}.routing" &
+./catch_rsvp > ${OUTDIR}/"${TIME}.rsvp" &
+./catch_tcp > ${OUTDIR}/"${TIME}.tcp" &
+./catch_tp > ${OUTDIR}/"${TIME}.tp" &
+./catch_udp > ${OUTDIR}/"${TIME}.udp"
+
+pkill -P $$
